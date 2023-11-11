@@ -269,7 +269,7 @@ class TransformerModel(AttModel):
         self.d_ff = getattr(opt, 'd_ff', opt.rnn_size)
         self.h = getattr(opt, 'num_att_heads', 8)
         self.dropout = getattr(opt, 'dropout', 0.1)
-
+        # delattr 函数用于删除属性。 delattr(x, 'foobar') 相等于 del x.foobar。
         delattr(self, 'att_embed')
         self.att_embed = nn.Sequential(*(
                                     ((nn.BatchNorm1d(self.att_feat_size),) if self.use_bn else ())+

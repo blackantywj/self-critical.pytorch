@@ -17,12 +17,14 @@ from .BertCapModel import BertCapModel
 from .M2Transformer import M2TransformerModel
 from .AoAModel import AoAModel
 # import all modules
-from baseModules_diffusionFunc import *
-from baseModules_Embedding import *
+from .baseModules_diffusionFunc import *
+from .baseModules_Embedding import *
 # from baseModules_diffusionFunc import *
-from baseModules_Feedforward import *
-from baseModules_Generator import *
-from baseModules_MHA import *
+from .baseModules_Feedforward import *
+from .baseModules_Generator import *
+from .baseModules_MHA import *
+from .computeFunc import *
+from .IntegratedModules import *
 
 
 def setup(opt):
